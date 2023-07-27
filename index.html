@@ -11,136 +11,17 @@
     <link rel="stylesheet" href="styles.v1.css">
 </head>
 <body>
-    <!--<script>// Function to check if the user is using a phone (iPhone)
-        function isPhone() {
-            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-        }
-
-        // Redirect if the user is using a phone
-        if (isPhone()) {
-            window.location.href = "IphoneAcessDenied.html";
-        }</script>-->
-    <header>
-        <nav>
-            <ul class="dropdown-menu">
-                <li class="dropdown-item">
-                    <a href="transitionWeb.html">Dropdown Item 1</a>
-                    <div class="dropdown-content">
-                        <button onclick="redirectTo('website1.html')">RI 2</button>
-                        <button onclick="redirectTo('website2.html')">RI 2</button>
-                    </div>
-                </li>
-                <li class="dropdown-item">
-                    <a href="transitionWeb.html">Dropdown Item 2</a>
-                    <div class="dropdown-content">
-                        <button onclick="redirectTo('website3.html')">RI 2</button>
-                        <button onclick="redirectTo('website4.html')">RI 2</button>
-                    </div>
-                </li>
-                <!-- Add more dropdown items here -->
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="clickable-items">
-            <!-- Placeholder items -->
-            <div class="item" id="item1">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 1</div>
-            </div>
-            <div class="item" id="item2">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 2</div>
-            </div>
-            <div class="item" id="item3">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 3</div>
-            </div>
-            <div class="item" id="item4">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 4</div>
-            </div>
-            <div class="item" id="item5">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 5</div>
-            </div>
-            <div class="item" id="item6">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 6</div>
-            </div>
-            <div class="item" id="item7">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 7</div>
-            </div>
-            <div class="item" id="item8">
-                <img src="" alt="" class="item-image">
-                <div class="item-text">Item 8</div>
-            </div>
-        </section>
-        <body>
-            <section class="show-all-button">
-                <button onclick="redirectToGallery()">Show all</button>
-            </section>
-
-            <script>// Your existing script
-
-                // Function to redirect to gallery.html when "Show all" button is clicked
-                function redirectToGallery() {
-                    window.location.href = 'gallery.html';
-                }</script>
-        </body>
-        <body>
-            <div class="bubbles-container">
-                <div class="bubble blue">
-                    <h2>Who are We?</h2>
-                    <p>Arcomedic is a Supplier-to-Consumer company, simplifying the task of buying hospital supplies from warehouses.</p>
-                </div>
-                <div class="bubble red">
-                    <h2>What do we do?</h2>
-                    <p>We, arcomedic, work with the best suppliers in the USA to get the top qualty hospital supplies delivered to you!</p>
-                </div>
-                <div class="bubble green">
-                    <h2>Contact us</h2>
-                    <p>mob: 06 30 822 722 || Tel / Fax: 01 47 51 20 44 || S.A.V: 06 30 822 722</p>
-                </div>
-            </div>
-        </body>
-
-        <script>function redirectTo(url) {
-                window.location.href = url;
-            }
-
-            // Custom data list [text, image_url]
-            const dataList = [
-                ["hello", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-                ["yes", "https://i.ibb.co/sV3nWnD/babajayyy.jpg"],
-
-                // Add more data items here in the same format
-            ];
-
-            // Function to update the items with custom data
-            function updateItems() {
-                const items = document.querySelectorAll('.item');
-                items.forEach((item, index) => {
-                    const textElement = item.querySelector('.item-text');
-                    const imageElement = item.querySelector('.item-image');
-                    const [text, imageUrl] = dataList[index];
-                    textElement.textContent = text;
-                    imageElement.src = imageUrl;
-                    imageElement.alt = text;
-                });
-            }
-
-            // Call the function to populate the items when the page loads
-            window.addEventListener('load', updateItems);</script>
-    </main>
+    <body>
+    <div class="big-letters">
+        <span class="letter l">
+            <img src="lsb-image.png" alt="L">
+        </span>
+        <span class="letter s">
+            <img src="lsb-image.png" alt="S">
+        </span>
+        <span class="letter b">
+            <img src="lsb-image.png" alt="B">
+        </span>
+    </div>
 </body>
 </html>
