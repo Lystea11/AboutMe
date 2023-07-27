@@ -16,17 +16,24 @@ body, html {
     margin: 0.2em; /* Adjust the letter spacing as needed */
     border: 5px solid white; /* Border color */
     padding: 0.5em; /* Optional: Add some padding around the letter */
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Custom styles for each letter */
 .l {
-    color: #FFFFFF; /* White color for the letter */
+    color: transparent; /* Set text color to transparent to hide the actual letter */
+    background-image: url('lsb-image.png'); /* Replace with the path to your image */
 }
 
 .s {
-    color: #FFFFFF; /* White color for the letter */
+    color: transparent; /* Set text color to transparent to hide the actual letter */
+    background-image: url('lsb-image.png'); /* Replace with the path to your image */
 }
 
 .b {
-    color: #FFFFFF; /* White color for the letter */
+    color: transparent; /* Set text color to transparent to hide the actual letter */
+    background-image: url('lsb-image.png'); /* Replace with the path to your image */
 }
