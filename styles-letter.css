@@ -1,0 +1,363 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('Background/AboutMeBG.v7.svg');
+    background-color: #000;
+    background-size: cover;
+    cursor: none;
+}.hidden {
+     opacity: 0;
+ }
+
+ .overlay {
+     position: fixed;
+     z-index: -2;
+     background-color: #000;
+     opacity: 1;
+     height: 100%;
+     width: 100%;
+     animation: fadeOut 5s ease-out;
+     animation: fadeIn 3s easie-in;
+     pointer-events: none;
+     animation-fill-mode: forwards;
+ }
+
+.fadeOutAnimation {
+    
+    animation: fadeOut 1s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+.main-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    background-color: #000;
+}
+
+.home-butt {
+    position: fixed;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 30;
+    transform: translate(-350%, -1080%) scale(0);
+    animation: popAnimation1 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-fill-mode: forwards;
+    animation-delay: 1.0s
+}
+.source-butt {
+    position: fixed;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate(-200%, -1080%);
+    animation: popAnimation2 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s
+}
+.kingicon {
+    position: fixed;
+    background-image: url('Background/kingicon.svg');
+    background-size: auto;
+    height: 80px;
+    width: 200px;
+    transform: translate(-40%, -495%);
+    opacity: 0;
+    animation: fadeIn 3s ease-out;
+    animation-fill-mode: forwards;
+}
+.about-butt {
+    position: fixed;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate(165%, -1080%);
+    animation: popAnimation3 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s
+}
+.contact-butt {
+    position: fixed;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translate(230%, -1080%);
+    animation: popAnimation4 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-fill-mode: forwards;
+    animation-delay: 1.0s;
+}
+
+.span {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s ease;
+}
+.home-butt:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px; /* You can adjust this value to make the line thicker or thinner */
+    width: 0;
+    background-color: #fff; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
+}.source-butt:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px; /* You can adjust this value to make the line thicker or thinner */
+    width: 0;
+    background-color: #fff; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
+}.about-butt:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px; /* You can adjust this value to make the line thicker or thinner */
+    width: 0;
+    background-color: #fff; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
+}.contact-butt:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px; /* You can adjust this value to make the line thicker or thinner */
+    width: 0;
+    background-color: #fff; /* Change this to your desired underline color */
+    transition: width 0.3s ease;
+}
+.home-butt:hover:after {
+    width: 100%;
+}.source-butt:hover:after {
+     width: 100%;
+ }.about-butt:hover:after {
+    width: 100%;
+}.contact-butt:hover:after {
+    width:100%;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-image: url('Cursor/Cursor.v4.png');
+    background-size: cover;
+    z-index: 3;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+}
+
+.clicked {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes breatheCursor {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+.popup-container1 {
+    position: fixed;
+    top: 10%; /* Use relative positioning for responsive scaling */
+    left: 5%; /* Use relative positioning for responsive scaling */
+    font-variant-caps: small-caps;
+    transform: translate(-64%, -45%); /* Center it precisely */
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20vw; /* Use relative units for font size */
+    letter-spacing: 1vw; /* Use relative units for letter spacing */
+    font-weight: bolder;
+    animation: fadeIn 3s ease-out; /* Added animation for the popup */
+}
+
+.movie-overlay {
+    position: absolute;
+    background-image: url('movie overlay.v5.svg');
+    background-size: cover;
+    width: 900px;
+    height: 2300px;
+    z-index: 14;
+    top: 100%; /* Use relative positioning for responsive scaling */
+    left: 55%; /* Use relative positioning for responsive scaling */
+    transform: translate(-40%, -10%); /* Center it precisely */
+    animation: fadeIn 3s ease-out;
+    pointer-events: none;
+}
+@keyframes popAnimation1 {
+    0% {
+        opacity: 0;
+        transform: translate(-350%, -1080%) scale(0.8);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-350%, -1080%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-350%, -1080%) scale(1.0);
+    }
+}
+@keyframes popAnimation2 {
+    0% {
+        opacity: 0;
+        transform: translate(-200%, -1080%) scale(0.8);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-200%, -1080%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-200%, -1080%) scale(1.0);
+    }
+}
+@keyframes popAnimation3 {
+    0% {
+        opacity: 0;
+        transform: translate(165%, -1080%) scale(0.8);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(165%, -1080%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(165%, -1080%) scale(1.0);
+    }
+}
+@keyframes popAnimation4 {
+    0% {
+        opacity: 0;
+        transform: translate(230%, -1080%) scale(0.8);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(230%, -1080%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(230%, -1080%) scale(1.0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.letter-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Use absolute positioning */
+    top: 50%; /* Center it vertically */
+    left: calc(100% - 456px); /* Position it 40 pixels to the left of the right edge */
+    transform: translate(-50%, -50%); /* Center it horizontally */
+    z-index:15;
+}
+
+.L-container,
+.B-container {
+    z-index: 1;
+}
+
+.L-letter,
+.B-letter {
+    font-size: 45.6vmax; /* Use relative units for font size */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('letter-images/DALLE4.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 0.8;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 20;
+}
+
+.S-letter {
+    font-size: 10vmax; /* Use relative units for font size */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('letter-images/firefly.v3.jpeg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 0.8;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .L-letter:hover,
+    .S-letter:hover,
+    .B-letter:hover {
+        transform: scale(1.1);
+    }

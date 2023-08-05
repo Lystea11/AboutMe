@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-size: cover;
+    cursor: none;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+}
+
+.letter-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.clicked {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+
+.L-letter, .B-letter {
+    font-size: 80vmin;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('letter-images/DALLE4.png');
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 0.8;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.S-letter {
+    font-size: 80vmin;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('letter-images/firefly.v3.jpeg');
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 0.8;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .L-letter:hover, .S-letter:hover, .B-letter:hover {
+        transform: scale(1.2);
+    }
+
+    .popup-container {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        font-size: 60px;
+        font-weight: bold;
+        color: #fff;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+
+    .popup-word {
+        display: inline-block;
+        animation: popupAnimation 1s ease-in-out;
+    }
+
+    .custom-cursor {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        background-image: url('Cursor/Cursor.v4.png');
+        background-size: cover;
+        z-index: 3;
+        pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
+    }
+
+    @keyframes breatheCursor {
+        0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes popupAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.S-container.animate-glide {
+    transform: translateX(-55.5vmin);
+}
+
+.B-container.animate-glide {
+    transform: translateX(-111vmin);
+}
